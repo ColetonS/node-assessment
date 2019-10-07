@@ -1,0 +1,919 @@
+{
+	"id": "d3d319b9-d0d9-4b90-975f-2dcc7afb0ea0",
+	"name": "node_assessment",
+	"allTests": [],
+	"timestamp": "2019-10-07T19:16:20.823Z",
+	"collection_id": "58a2c390-77d5-42c6-acc6-a2b51e7952e8",
+	"folder_id": 0,
+	"target_type": "collection",
+	"environment_id": "0",
+	"data": [],
+	"delay": 0,
+	"count": 1,
+	"collection": {
+		"id": "58a2c390-77d5-42c6-acc6-a2b51e7952e8",
+		"name": "node_assessment",
+		"description": null,
+		"auth": null,
+		"events": [
+			{
+				"listen": "prerequest",
+				"script": {
+					"id": "de7e0047-9e5d-473f-b23b-e3256026e83c",
+					"type": "text/javascript",
+					"exec": [
+						""
+					]
+				}
+			},
+			{
+				"listen": "test",
+				"script": {
+					"id": "40fcdb5e-200c-4001-8d79-bf262b1ecc4e",
+					"type": "text/javascript",
+					"exec": [
+						""
+					]
+				}
+			}
+		],
+		"variables": null,
+		"order": [
+			"24ea9615-61f3-44ce-8eed-25e36fd54628",
+			"2ed76529-e115-459a-b1c6-912ccdf66c89",
+			"0ac8303c-e1ef-4fe0-a548-81d1e7f75803",
+			"8470b33e-1e11-4eef-a845-dcb25660a5f9",
+			"d2c06b03-bf9c-472f-80f9-569176d43b79",
+			"43eeb3e7-202b-4fc0-b708-61c3e40f1389",
+			"c510a00a-d731-47d9-b6a3-263698ed2c12",
+			"acb87d90-2ed7-4d9d-b84e-3d8d91597aa7",
+			"d0398836-d1f0-46bd-997c-cb922f960c8c",
+			"62fe8ad4-9ae1-4044-8c55-4660b1f91cd6",
+			"7f3d19f2-07d5-475f-bb30-4df4bb0478ba",
+			"f35f070a-20d1-4400-b92a-fbbb5cbaa1c2",
+			"6c9bf270-6759-4445-84f2-6885a2b51963",
+			"9fcd116d-1929-40cf-a08a-2530d93ceae1",
+			"3390513d-4791-49d3-adf4-5730eb312084",
+			"3c39c4cd-6c3d-42aa-9a5c-cb19cb286ccd",
+			"dcd97d1b-83ca-4000-b2c3-aa741fd2ee00",
+			"87a250a4-7e72-4128-8ce1-1acadcdbdad9",
+			"3e6a4138-41e3-4132-90e8-3c594cb41ab2"
+		],
+		"folders_order": [],
+		"owner": "0",
+		"favorite": false,
+		"protocolProfileBehavior": {}
+	},
+	"folder": null,
+	"environment": null,
+	"globals": [
+		{
+			"key": "ageData",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "emailData",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "favoritesData",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "nextExpectedID",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "users",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "randomId",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "putData",
+			"value": "",
+			"enabled": true
+		}
+	],
+	"results": [
+		{
+			"name": "Get All Users - #1",
+			"id": "24ea9615-61f3-44ce-8eed-25e36fd54628",
+			"url": "localhost:3000/api/user",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"10"
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			],
+			"time": "10",
+			"totalRequestTime": "10",
+			"iterationResults": {}
+		},
+		{
+			"name": "Get All Users ( favorites ) - #1",
+			"id": "2ed76529-e115-459a-b1c6-912ccdf66c89",
+			"url": "localhost:3000/api/user?favorites=react",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Every User Returned has React as a favorite": true,
+				"Has the correct Length": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Every User Returned has React as a favorite": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Has the correct Length": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"6"
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Every User Returned has React as a favorite": true,
+					"Has the correct Length": true
+				}
+			],
+			"time": "6",
+			"totalRequestTime": "6",
+			"iterationResults": {}
+		},
+		{
+			"name": "Get All Users ( age ) - #1",
+			"id": "0ac8303c-e1ef-4fe0-a548-81d1e7f75803",
+			"url": "localhost:3000/api/user?age=40",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Every users is under 40": true,
+				"Has the correct Length": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Every users is under 40": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Has the correct Length": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"4"
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Every users is under 40": true,
+					"Has the correct Length": true
+				}
+			],
+			"time": "4",
+			"totalRequestTime": "4",
+			"iterationResults": {}
+		},
+		{
+			"name": "Get All Users ( email ) - #1",
+			"id": "8470b33e-1e11-4eef-a845-dcb25660a5f9",
+			"url": "localhost:3000/api/user?email=mrodriguez1k@cornell.edu",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Returned User has the correct email": true,
+				"Has the correct Length": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Returned User has the correct email": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Has the correct Length": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"3"
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Returned User has the correct email": true,
+					"Has the correct Length": true
+				}
+			],
+			"time": "3",
+			"totalRequestTime": "3",
+			"iterationResults": {}
+		},
+		{
+			"name": "Get User By Id - #2",
+			"id": "d2c06b03-bf9c-472f-80f9-569176d43b79",
+			"url": "localhost:3000/api/user/19",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Status code is 200": true,
+				"returned user is the correct one": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"returned user is the correct one": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				"6"
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"returned user is the correct one": false
+				}
+			],
+			"time": "6",
+			"totalRequestTime": "6",
+			"iterationResults": {}
+		},
+		{
+			"name": "Get User By Id - #2",
+			"id": "43eeb3e7-202b-4fc0-b708-61c3e40f1389",
+			"url": "localhost:3000/api/user/1410",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Status code is 404": false
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				"5"
+			],
+			"allTests": [
+				{
+					"Status code is 404": false
+				}
+			],
+			"time": "5",
+			"totalRequestTime": "5",
+			"iterationResults": {}
+		},
+		{
+			"name": "Get Admins - #3",
+			"id": "c510a00a-d731-47d9-b6a3-263698ed2c12",
+			"url": "localhost:3000/api/admin",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Status code is 200": true,
+				"All Returned users have type of Admin": true,
+				"Has the correct number of items": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"All Returned users have type of Admin": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Has the correct number of items": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"4"
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"All Returned users have type of Admin": true,
+					"Has the correct number of items": true
+				}
+			],
+			"time": "4",
+			"totalRequestTime": "4",
+			"iterationResults": {}
+		},
+		{
+			"name": "Get Non-Admins - #4",
+			"id": "acb87d90-2ed7-4d9d-b84e-3d8d91597aa7",
+			"url": "localhost:3000/api/nonadmin",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Status code is 200": true,
+				"All Returned are not admins": true,
+				"Has the correct number of items": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"All Returned are not admins": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Has the correct number of items": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				"3"
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"All Returned are not admins": true,
+					"Has the correct number of items": false
+				}
+			],
+			"time": "3",
+			"totalRequestTime": "3",
+			"iterationResults": {}
+		},
+		{
+			"name": "Get Users By Type (user) - #5",
+			"id": "d0398836-d1f0-46bd-997c-cb922f960c8c",
+			"url": "localhost:3000/api/type/user",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Status code is 200": true,
+				"All Returned are not admins": true,
+				"Has the correct number of items": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"All Returned are not admins": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Has the correct number of items": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"3"
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"All Returned are not admins": true,
+					"Has the correct number of items": true
+				}
+			],
+			"time": "3",
+			"totalRequestTime": "3",
+			"iterationResults": {}
+		},
+		{
+			"name": "Get Users By Type (moderator) - #5",
+			"id": "62fe8ad4-9ae1-4044-8c55-4660b1f91cd6",
+			"url": "localhost:3000/api/type/moderator",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Status code is 200": true,
+				"All Returned are not admins": true,
+				"Has the correct number of items": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"All Returned are not admins": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Has the correct number of items": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"2"
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"All Returned are not admins": true,
+					"Has the correct number of items": true
+				}
+			],
+			"time": "2",
+			"totalRequestTime": "2",
+			"iterationResults": {}
+		},
+		{
+			"name": "Get Users By Type (admin) - #5",
+			"id": "7f3d19f2-07d5-475f-bb30-4df4bb0478ba",
+			"url": "localhost:3000/api/type/admin",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Status code is 200": true,
+				"All Returned are not admins": true,
+				"Has the correct number of items": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"All Returned are not admins": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Has the correct number of items": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"6"
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"All Returned are not admins": true,
+					"Has the correct number of items": true
+				}
+			],
+			"time": "6",
+			"totalRequestTime": "6",
+			"iterationResults": {}
+		},
+		{
+			"name": "Remove User by Id - #8",
+			"id": "f35f070a-20d1-4400-b92a-fbbb5cbaa1c2",
+			"url": "http://localhost:3000/api/user/3",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"4"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "4",
+			"totalRequestTime": "4",
+			"iterationResults": {}
+		}
+	],
+	"totalPass": 25,
+	"totalFail": 3,
+	"totalTime": 56,
+	"lifecycle": "done",
+	"requests": [
+		{
+			"name": "Get All Users - #1",
+			"id": "24ea9615-61f3-44ce-8eed-25e36fd54628",
+			"url": "localhost:3000/api/user",
+			"time": "2019-10-07T19:16:20.823Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Get All Users ( favorites ) - #1",
+			"id": "2ed76529-e115-459a-b1c6-912ccdf66c89",
+			"url": "localhost:3000/api/user?favorites=react",
+			"time": "2019-10-07T19:16:20.823Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Every User Returned has React as a favorite": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Has the correct Length": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Get All Users ( age ) - #1",
+			"id": "0ac8303c-e1ef-4fe0-a548-81d1e7f75803",
+			"url": "localhost:3000/api/user?age=40",
+			"time": "2019-10-07T19:16:20.823Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Every users is under 40": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Has the correct Length": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Get All Users ( email ) - #1",
+			"id": "8470b33e-1e11-4eef-a845-dcb25660a5f9",
+			"url": "localhost:3000/api/user?email=mrodriguez1k@cornell.edu",
+			"time": "2019-10-07T19:16:20.823Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Returned User has the correct email": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Has the correct Length": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Get User By Id - #2",
+			"id": "d2c06b03-bf9c-472f-80f9-569176d43b79",
+			"url": "localhost:3000/api/user/19",
+			"time": "2019-10-07T19:16:20.823Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"returned user is the correct one": {
+					"pass": 0,
+					"fail": 1
+				}
+			}
+		},
+		{
+			"name": "Get User By Id - #2",
+			"id": "43eeb3e7-202b-4fc0-b708-61c3e40f1389",
+			"url": "localhost:3000/api/user/1410",
+			"time": "2019-10-07T19:16:20.823Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 0,
+					"fail": 1
+				}
+			}
+		},
+		{
+			"name": "Get Admins - #3",
+			"id": "c510a00a-d731-47d9-b6a3-263698ed2c12",
+			"url": "localhost:3000/api/admin",
+			"time": "2019-10-07T19:16:20.823Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"All Returned users have type of Admin": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Has the correct number of items": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Get Non-Admins - #4",
+			"id": "acb87d90-2ed7-4d9d-b84e-3d8d91597aa7",
+			"url": "localhost:3000/api/nonadmin",
+			"time": "2019-10-07T19:16:20.823Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"All Returned are not admins": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Has the correct number of items": {
+					"pass": 0,
+					"fail": 1
+				}
+			}
+		},
+		{
+			"name": "Get Users By Type (user) - #5",
+			"id": "d0398836-d1f0-46bd-997c-cb922f960c8c",
+			"url": "localhost:3000/api/type/user",
+			"time": "2019-10-07T19:16:20.823Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"All Returned are not admins": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Has the correct number of items": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Get Users By Type (moderator) - #5",
+			"id": "62fe8ad4-9ae1-4044-8c55-4660b1f91cd6",
+			"url": "localhost:3000/api/type/moderator",
+			"time": "2019-10-07T19:16:20.823Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"All Returned are not admins": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Has the correct number of items": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Get Users By Type (admin) - #5",
+			"id": "7f3d19f2-07d5-475f-bb30-4df4bb0478ba",
+			"url": "localhost:3000/api/type/admin",
+			"time": "2019-10-07T19:16:20.823Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"All Returned are not admins": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Has the correct number of items": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Remove User by Id - #8",
+			"id": "f35f070a-20d1-4400-b92a-fbbb5cbaa1c2",
+			"url": "http://localhost:3000/api/user/3",
+			"time": "2019-10-07T19:16:20.823Z",
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"testPassFailCounts": {}
+		}
+	],
+	"synced": false
+}

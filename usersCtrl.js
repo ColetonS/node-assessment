@@ -48,5 +48,23 @@ module.exports = {
           return user.type === req.params.userType
       })
       res.status(200).send(filteredUsers)
+  },
+  updateUser(req, res) {
+      const { first_name, last_name, email, gender, language, age, city, state, type, favorites } = req.body
+      const user = data.filter(user => {
+          return user.id === +req.params.userId
+      })
+      user.first_name = first_name
+      user.last_name = last_name
+      user.email = email
+      user.gender = gender
+      user.language = language
+      user.age = age
+      user.city = city
+      user.state = state
+      user.type = type
+      user.favorites = favorites
+      res.status(200).send(user)
+
   }
 };

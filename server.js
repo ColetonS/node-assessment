@@ -11,5 +11,6 @@ app.get('/api/user/:userId', usersCtrl.getUserById)
 app.get('/api/admin', usersCtrl.getAdmins)
 app.get('/api/nonadmin', usersCtrl.getNonAdmins)
 app.get('/api/type/:userType', usersCtrl.getUserByType)
+app.put('/api/user/:userId', usersCtrl.updateUser)
 
 app.listen(SERVER_PORT, () => console.log(`Listening on port ${SERVER_PORT}`))
